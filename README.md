@@ -25,6 +25,162 @@ The project follows a structured football analytics workflow:
 - **Tactical evaluation:** Interpreting the findings in the context of Real Madrid's left-wing role.
 - **Scenario analysis:** Exploring how different evaluation assumptions affect the selection assessment.
 
+Key Findings
+
+The analysis focuses on the LaLiga 2026/27 sample available at the time of data collection.
+
+1. Overall match involvement
+
+Metric
+
+Vinícius Júnior
+
+Yan Diomande
+
+Appearances
+
+8
+
+12
+
+Minutes played
+
+585
+
+714
+
+Starts
+
+7
+
+7
+
+Both players recorded seven starts, although Diomande accumulated more total appearances and minutes.
+
+2. Performance as a starting left winger
+
+To make the comparison more positionally relevant, the analysis isolates their appearances when starting at left wing.
+
+Metric
+
+Vinícius Júnior
+
+Yan Diomande
+
+Starts at LW
+
+7
+
+5
+
+Minutes at LW
+
+565
+
+434
+
+Goals
+
+1
+
+3
+
+Assists
+
+3
+
+1
+
+Goal contributions
+
+4
+
+4
+
+G+A per 90
+
+0.637
+
+0.829
+
+Key observation: Both players recorded four goal contributions in their starting-left-wing samples.
+
+However, Diomande produced those four contributions in 434 minutes, compared with Vinícius's 565 minutes.
+
+His goal-contribution rate was approximately 30% higher in this sample.
+
+This is an encouraging early signal, not proof that Diomande is the better player.
+
+3. Positional versatility
+
+Diomande also featured as a starting right winger:
+
+Metric
+
+Diomande at RW
+
+Starts
+
+2
+
+Minutes
+
+161
+
+Goals
+
+0
+
+Assists
+
+1
+
+G+A per 90
+
+0.559
+
+This provides an additional indication of his involvement across the two wide positions.
+
+4. Match rating consistency
+
+FotMob match ratings provide another perspective on performance.
+
+Rating metric
+
+Vinícius Júnior
+
+Yan Diomande
+
+Average rating
+
+7.586
+
+8.160
+
+Median rating
+
+7.80
+
+8.10
+
+Standard deviation
+
+0.756
+
+0.631
+
+Ratings of 8.0 or higher
+
+2/7
+
+4/5
+
+Rating range
+
+6.5–8.6
+
+7.2–8.9
+
 ## Dashboard Features
 
 The Streamlit application provides:
