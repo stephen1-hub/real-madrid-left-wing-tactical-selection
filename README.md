@@ -66,10 +66,15 @@ These results are exploratory and do not establish a permanent selection hierarc
 - FotMob-derived data
 
 ## Running the Dashboard
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+real-madrid-left-wing-tactical-selection/
+│
+├── app57.py
+├── requirements.txt
+│
+└── data/
+    ├── player_profile.csv
+    ├── player_metrics.csv
+    └── left_wing_matches.csv
 ```
 
 ## Limitations
