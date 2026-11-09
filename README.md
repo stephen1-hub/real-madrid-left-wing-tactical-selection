@@ -35,6 +35,7 @@ The Streamlit application provides:
 - Match-level analysis.
 - Tactical selection insights.
 - Scenario and robustness analysis.
+Dashboard link: https://real-madrid-left-wing-tactical-selection-oa296memfc6junsuraemb.streamlit.app/
 
 ## Project Structure
 
