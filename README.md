@@ -1,53 +1,81 @@
-# Real Madrid Left-Wing Tactical Selection Model
+# Real Madrid Left-Wing Tactical Selection
 
-## Run on Windows
+**Vinícius Júnior vs Yan Diomande | LaLiga 2026/27**
 
-Open PowerShell in this folder and run:
+## Overview
 
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install --upgrade pip
-py -m pip install -r requirements.txt
-py -m streamlit run app.py
+Who should start at left wing for Real Madrid?
+
+This project develops a data-driven tactical selection framework comparing Vinícius Júnior and Yan Diomande using FotMob-derived performance data.
+
+Rather than relying exclusively on goals, assists or player ratings, the analysis evaluates five tactical dimensions:
+
+- Attacking threat
+- Creativity
+- Ball progression
+- Defensive contribution
+- Performance reliability
+
+## Research Questions
+
+1. Who offers the strongest overall left-wing profile?
+2. Does the preferred player change under different tactical scenarios?
+3. How sensitive is the selection to tactical weighting assumptions?
+4. Under what conditions does Diomande become the preferred option?
+
+## Methodology
+
+The project combines:
+
+- Position-specific match analysis.
+- Per-90 performance metrics.
+- Relative-advantage scoring.
+- Weighted tactical selection.
+- Five predefined tactical scenarios.
+- Monte Carlo weight-distribution robustness testing.
+
+The weight-distribution experiment investigates how frequently each player leads under different plausible tactical priorities.
+
+## Key Findings
+
+- Vinícius leads four of five predefined tactical scenarios.
+- Diomande leads the pressing and defensive-work scenario.
+- Vinícius has stronger attacking-threat and creativity scores.
+- Diomande has stronger progression and defensive-contribution scores.
+- The broad weight-distribution experiment favours Diomande more frequently.
+
+These results are exploratory and do not establish a permanent selection hierarchy.
+
+## Sample Definition
+
+| Measure | Vinícius | Diomande |
+|---|---:|---:|
+| Verified LW starts | 7 | 5 |
+| LW minutes | 565 | 434 |
+| LW goals | 1 | 3 |
+| LW assists | 3 | 1 |
+| LW goal contributions | 4 | 4 |
+
+## Technology Stack
+
+- Python
+- Pandas
+- NumPy
+- Plotly
+- Streamlit
+- FotMob-derived data
+
+## Running the Dashboard
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-If you already have a virtual environment and dependencies installed, run:
+## Limitations
 
-```powershell
-py -m streamlit run app.py
-```
+The study uses a small number of verified left-wing starts. Some tactical metrics are season-wide rather than position-specific. The weight distributions represent modelling assumptions, not actual coaching preferences or probabilities of match success.
 
-## Files
+## Research Status
 
-- `app.py`: Streamlit tactical selection model.
-- `data/player_profile.csv`: player season profile and reconciled minutes.
-- `data/player_metrics.csv`: FotMob leaderboard snapshot metrics.
-- `data/left_wing_matches.csv`: verified left-wing start match log.
-
-## Important interpretation notes
-
-- The match log supports position-specific left-wing ratings, minutes and goal contributions.
-- The leaderboard snapshot metrics are season-level and are not confirmed as left-wing-only.
-- Diomande's leaderboard snapshot used 630 minutes while the reconciled profile shows 714; snapshot per-90 metrics remain provisional.
-- Relative scores compare only Vinícius and Diomande. They are not league percentiles.
-- Weights are transparent user assumptions, not empirically fitted coefficients.
-- The tool is decision support, not a validated prediction model.
-
-
-## Scoring engine update (v2)
-Metric comparisons use a symmetric bounded relative-advantage score:
-- 50 means the two values are equal.
-- Above 50 favours the first player; below 50 favours the second.
-- The two player scores sum to 100 for each metric.
-- Small differences remain small; the model no longer min-max stretches every two-player difference to 0 and 100.
-- A metric is compared only when both players have valid values.
-- Dimension scores are averaged from paired metric scores and are not rescaled a second time.
-
-
-## Version 3 — Monte Carlo weight robustness
-The dashboard now samples tactical weight combinations using a Dirichlet distribution.
-It reports the share of sampled combinations under which each player leads, the
-distribution of weighted-score margins, and how lead frequency changes across
-weight bands. These are robustness diagnostics for model assumptions, not
-probabilities of match outcomes or player success.
+Exploratory tactical selection model developed. Further validation using position-specific metrics, opponent tactical profiles and team-level impact analysis is required.
