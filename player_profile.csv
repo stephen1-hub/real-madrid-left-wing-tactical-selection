@@ -1,0 +1,3 @@
+player,player_id,minutes,appearances,season_starts,substitute_appearances,lw_average_rating,lw_median_rating,goals,assists,xg_per90,xa_per90,goal_contributions_per90,xg_xa_per90
+Vinícius Júnior,846033,585,8,7,1,7.586,7.8,1,3,0.462,0.262,0.637,0.723
+Yan Diomande,1735453,714,12,7,5,8.16,8.1,3,2,0.139,0.126,0.63,0.265
