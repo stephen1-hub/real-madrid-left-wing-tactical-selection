@@ -40,15 +40,14 @@ The Streamlit application provides:
 
 ```text
 real-madrid-left-wing-tactical-selection/
-│
 ├── app57.py
 ├── requirements.txt
 ├── README.md
-│
 └── data/
-    ├── left_wing_matches.csv
+    ├── .gitkeep
+    ├── player_profile.csv
     ├── player_metrics.csv
-    └── player_profile.csv
+    └── left_wing_matches.csv
 ```
 
 ## Technologies
