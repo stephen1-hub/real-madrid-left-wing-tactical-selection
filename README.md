@@ -1,205 +1,171 @@
-# Real Madrid Left-Wing Tactical Selection Model
+# ⚽ Real Madrid Left-Wing Tactical Selection Model
 
-## Project Overview
+**Vinícius Júnior vs Yan Diomande**
 
-This project evaluates two left-wing options for Real Madrid: **Vinícius Júnior and Yan Diomande**.
+An exploratory football analytics project evaluating two left-wing profiles through performance metrics, match ratings, positional deployment and tactical considerations.
 
-The objective is to assess how each player's statistical profile, attacking contribution and tactical characteristics could influence Real Madrid's left-wing selection.
+[![Live Dashboard](https://img.shields.io/badge/Streamlit-Live%20Dashboard-red?logo=streamlit)](https://real-madrid-left-wing-tactical-selection-oa296memfc6junsuraemb.streamlit.app/)
 
-Rather than relying solely on goals and assists, the analysis considers a broader set of performance indicators to support a more evidence-based player comparison.
+---
 
-## Research Questions
+## 1. Project Overview
+
+Who offers the stronger statistical profile for Real Madrid's left-wing position: Vinícius Júnior or Yan Diomande?
+
+This project investigates that question through football data analytics.
+
+Rather than relying exclusively on reputation, goals or assists, the analysis compares both players using match-level performance data, attacking contributions, positional deployment and FotMob match ratings.
+
+The objective is to develop an evidence-based framework for understanding their strengths, differences and potential tactical suitability for Real Madrid.
+
+## 2. Research Questions
+
+The analysis addresses four main questions:
 
 1. How do Vinícius Júnior and Yan Diomande compare across key attacking metrics?
 2. What differences exist in their attacking profiles and contributions?
-3. Which player offers characteristics that may better suit Real Madrid's left-wing requirements?
+3. Which player demonstrates stronger performance indicators when deployed as a starting left winger?
 4. How robust are the selection conclusions under different evaluation scenarios?
 
-## Analytical Approach
+---
 
-The project follows a structured football analytics workflow:
+## 3. Key Findings
 
-- **Data preparation:** Organising player and match-level performance data.
-- **Performance analysis:** Comparing relevant attacking and contribution metrics.
-- **Player profiling:** Examining the strengths and differences in each player's statistical profile.
-- **Tactical evaluation:** Interpreting the findings in the context of Real Madrid's left-wing role.
-- **Scenario analysis:** Exploring how different evaluation assumptions affect the selection assessment.
+The findings below are based on the LaLiga 2026/27 sample available at the time of data collection.
 
-Key Findings
+### 3.1 Overall Match Involvement
 
-The analysis focuses on the LaLiga 2026/27 sample available at the time of data collection.
+| Metric | Vinícius Júnior | Yan Diomande |
+|---|---:|---:|
+| Appearances | 8 | 12 |
+| Minutes played | 585 | 714 |
+| Starts | 7 | 7 |
 
-1. Overall match involvement
+**Key observation:** Both players recorded seven starts. However, Diomande accumulated more appearances and total playing time.
 
-Metric
+### 3.2 Performance as a Starting Left Winger
 
-Vinícius Júnior
+To improve positional relevance, the comparison isolates appearances in which each player started at left wing.
 
-Yan Diomande
+| Metric | Vinícius Júnior | Yan Diomande |
+|---|---:|---:|
+| Starts at LW | 7 | 5 |
+| Minutes at LW | 565 | 434 |
+| Goals | 1 | 3 |
+| Assists | 3 | 1 |
+| Goal contributions | 4 | 4 |
+| G+A per 90 | 0.637 | 0.829 |
 
-Appearances
+**Key observation:**
 
-8
+Both players recorded four goal contributions in their respective starting-left-wing samples.
 
-12
-
-Minutes played
-
-585
-
-714
-
-Starts
-
-7
-
-7
-
-Both players recorded seven starts, although Diomande accumulated more total appearances and minutes.
-
-2. Performance as a starting left winger
-
-To make the comparison more positionally relevant, the analysis isolates their appearances when starting at left wing.
-
-Metric
-
-Vinícius Júnior
-
-Yan Diomande
-
-Starts at LW
-
-7
-
-5
-
-Minutes at LW
-
-565
-
-434
-
-Goals
-
-1
-
-3
-
-Assists
-
-3
-
-1
-
-Goal contributions
-
-4
-
-4
-
-G+A per 90
-
-0.637
-
-0.829
-
-Key observation: Both players recorded four goal contributions in their starting-left-wing samples.
-
-However, Diomande produced those four contributions in 434 minutes, compared with Vinícius's 565 minutes.
+However, Diomande produced those contributions in 434 minutes, compared with Vinícius's 565 minutes.
 
 His goal-contribution rate was approximately 30% higher in this sample.
 
-This is an encouraging early signal, not proof that Diomande is the better player.
+This suggests a stronger early production rate for Diomande in the selected sample, although it does not establish that he is the better overall player.
 
-3. Positional versatility
+### 3.3 Positional Versatility
 
-Diomande also featured as a starting right winger:
+Diomande also featured as a starting right winger.
 
-Metric
+| Metric | Diomande at RW |
+|---|---:|
+| Starts | 2 |
+| Minutes | 161 |
+| Goals | 0 |
+| Assists | 1 |
+| G+A per 90 | 0.559 |
 
-Diomande at RW
+This provides an additional indication of his involvement across both wide positions.
 
-Starts
+### 3.4 Match Rating Comparison
 
-2
+FotMob match ratings provide another perspective on individual performance.
 
-Minutes
+| Rating metric | Vinícius Júnior | Yan Diomande |
+|---|---:|---:|
+| Average rating | 7.586 | 8.160 |
+| Median rating | 7.80 | 8.10 |
+| Standard deviation | 0.756 | 0.631 |
+| Ratings of 8.0 or higher | 2/7 | 4/5 |
+| Rating range | 6.5–8.6 | 7.2–8.9 |
 
-161
+**Key observation:**
 
-Goals
+Diomande recorded a higher average and median match rating in the starting-left-wing sample.
 
-0
+His ratings also showed lower dispersion, indicating less variation within this small sample.
 
-Assists
+However, Vinícius has a larger sample of starting appearances at left wing. This difference must be considered when interpreting the results.
 
-1
+---
 
-G+A per 90
+## 4. What Do the Findings Tell Us?
 
-0.559
+Three important observations emerge:
 
-This provides an additional indication of his involvement across the two wide positions.
+**1. Goal-contribution efficiency**
 
-4. Match rating consistency
+Diomande recorded the higher goal-contribution rate per 90 minutes in the starting-left-wing sample.
 
-FotMob match ratings provide another perspective on performance.
+**2. Match performance**
 
-Rating metric
+Diomande recorded a higher average FotMob rating and more ratings of 8.0 or higher within the available sample.
 
-Vinícius Júnior
+**3. Sample size and context**
 
-Yan Diomande
+Vinícius has a larger starting-left-wing sample. Further observations are needed before making a definitive comparison.
 
-Average rating
+The results suggest that Diomande presents an interesting statistical profile, but statistical superiority in a limited sample does not automatically translate into tactical superiority.
 
-7.586
+---
 
-8.160
+## 5. Analytical Methodology
 
-Median rating
+The project follows a structured football analytics workflow:
 
-7.80
+1. **Data collection:** Gathering player and match-level performance information.
+2. **Data preparation:** Cleaning and organising the datasets.
+3. **Performance analysis:** Comparing relevant attacking indicators.
+4. **Positional filtering:** Isolating starting-left-wing appearances.
+5. **Metric calculation:** Evaluating goal contributions per 90 minutes.
+6. **Rating analysis:** Comparing average ratings, medians and standard deviations.
+7. **Tactical interpretation:** Evaluating the findings in the context of Real Madrid's left-wing requirements.
 
-8.10
+---
 
-Standard deviation
+## 6. Interactive Dashboard
 
-0.756
+The Streamlit application brings the analysis together in an interactive environment.
 
-0.631
-
-Ratings of 8.0 or higher
-
-2/7
-
-4/5
-
-Rating range
-
-6.5–8.6
-
-7.2–8.9
-
-## Dashboard Features
-
-The Streamlit application provides:
+### Dashboard Features
 
 - Player profile comparisons.
 - Key performance indicators.
 - Attacking performance visualisations.
-- Match-level analysis.
+- Goal and assist analysis.
+- Match-level performance analysis.
+- Positional comparisons.
 - Tactical selection insights.
 - Scenario and robustness analysis.
-# Dashboard link: https://real-madrid-left-wing-tactical-selection-oa296memfc6junsuraemb.streamlit.app/
 
-## Project Structure
+### Explore the Live Dashboard
+
+**[Launch the Real Madrid Left-Wing Tactical Selection Dashboard](https://real-madrid-left-wing-tactical-selection-oa296memfc6junsuraemb.streamlit.app/)**
+
+---
+
+## 7. Project Structure
 
 ```text
 real-madrid-left-wing-tactical-selection/
+│
 ├── app57.py
 ├── requirements.txt
 ├── README.md
+│
 └── data/
     ├── .gitkeep
     ├── player_profile.csv
@@ -207,16 +173,22 @@ real-madrid-left-wing-tactical-selection/
     └── left_wing_matches.csv
 ```
 
-## Technologies
+---
 
-- Python
-- Pandas
-- NumPy
-- Streamlit
-- Plotly
-- Data visualisation and statistical analysis
+## 8. Technologies Used
 
-## Running the Application Locally
+| Technology | Application |
+|---|---|
+| Python | Data analysis and application development |
+| Pandas | Data cleaning and manipulation |
+| NumPy | Numerical computations |
+| Streamlit | Interactive dashboard |
+| Plotly | Interactive visualisations |
+| Git and GitHub | Version control and project hosting |
+
+---
+
+## 9. Running the Application Locally
 
 Clone the repository:
 
@@ -224,30 +196,60 @@ Clone the repository:
 git clone https://github.com/stephen1-hub/real-madrid-left-wing-tactical-selection.git
 ```
 
-Move into the project directory:
+Navigate to the project directory:
 
 ```bash
 cd real-madrid-left-wing-tactical-selection
 ```
 
-Install dependencies:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the Streamlit application:
+Run the dashboard:
 
 ```bash
 streamlit run app57.py
 ```
 
-## Deployment
+---
 
-The application is designed for deployment using Streamlit Community Cloud.
+## 10. Limitations and Interpretation
 
-Repository: [GitHub Project](https://github.com/stephen1-hub/real-madrid-left-wing-tactical-selection)
+The findings should be interpreted with the following considerations:
 
-## Important Note
+- The comparison uses a relatively small number of starting appearances.
+- The players' samples cover different match periods.
+- FotMob ratings are provider-generated indicators and do not capture every aspect of individual performance.
+- Goal contributions per 90 minutes can fluctuate considerably in small samples.
+- Tactical suitability also depends on role, opposition quality, team structure, off-ball movement and responsibilities not fully represented by the available metrics.
 
-This is an analytical decision-support project. Statistical
+Consequently, this analysis is an exploratory performance comparison rather than a definitive recruitment verdict.
+
+---
+
+## 11. Conclusion
+
+The numbers create an interesting debate.
+
+Diomande leads the available starting-left-wing sample in goal contributions per 90 minutes and average match rating. Vinícius provides a larger sample of starting appearances and remains an important benchmark for evaluating the position.
+
+The central question is not simply who has the better numbers.
+
+It is:
+
+**Which player profile best supports Real Madrid's tactical requirements?**
+
+Data does not replace football judgement. It makes that judgement more informed.
+
+---
+
+## Author
+
+**Stephen Yaw Ayamah**
+
+Football Data Analyst | Opposition Analysis | Performance Analytics
+
+**Build → Analyse → Explain → Visualise → Publish.**
