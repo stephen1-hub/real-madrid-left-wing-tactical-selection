@@ -69,7 +69,7 @@ These results are exploratory and do not establish a permanent selection hierarc
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run app57.py
 ```
 
 ## Limitations
