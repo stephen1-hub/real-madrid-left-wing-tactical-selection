@@ -1,86 +1,97 @@
-# Real Madrid Left-Wing Tactical Selection
+# Real Madrid Left-Wing Tactical Selection Model
 
-**Vinícius Júnior vs Yan Diomande | LaLiga 2026/27**
+## Project Overview
 
-## Overview
+This project evaluates two left-wing options for Real Madrid: **Vinícius Júnior and Yan Diomande**.
 
-Who should start at left wing for Real Madrid?
+The objective is to assess how each player's statistical profile, attacking contribution and tactical characteristics could influence Real Madrid's left-wing selection.
 
-This project develops a data-driven tactical selection framework comparing Vinícius Júnior and Yan Diomande using FotMob-derived performance data.
-
-Rather than relying exclusively on goals, assists or player ratings, the analysis evaluates five tactical dimensions:
-
-- Attacking threat
-- Creativity
-- Ball progression
-- Defensive contribution
-- Performance reliability
+Rather than relying solely on goals and assists, the analysis considers a broader set of performance indicators to support a more evidence-based player comparison.
 
 ## Research Questions
 
-1. Who offers the strongest overall left-wing profile?
-2. Does the preferred player change under different tactical scenarios?
-3. How sensitive is the selection to tactical weighting assumptions?
-4. Under what conditions does Diomande become the preferred option?
+1. How do Vinícius Júnior and Yan Diomande compare across key attacking metrics?
+2. What differences exist in their attacking profiles and contributions?
+3. Which player offers characteristics that may better suit Real Madrid's left-wing requirements?
+4. How robust are the selection conclusions under different evaluation scenarios?
 
-## Methodology
+## Analytical Approach
 
-The project combines:
+The project follows a structured football analytics workflow:
 
-- Position-specific match analysis.
-- Per-90 performance metrics.
-- Relative-advantage scoring.
-- Weighted tactical selection.
-- Five predefined tactical scenarios.
-- Monte Carlo weight-distribution robustness testing.
+- **Data preparation:** Organising player and match-level performance data.
+- **Performance analysis:** Comparing relevant attacking and contribution metrics.
+- **Player profiling:** Examining the strengths and differences in each player's statistical profile.
+- **Tactical evaluation:** Interpreting the findings in the context of Real Madrid's left-wing role.
+- **Scenario analysis:** Exploring how different evaluation assumptions affect the selection assessment.
 
-The weight-distribution experiment investigates how frequently each player leads under different plausible tactical priorities.
+## Dashboard Features
 
-## Key Findings
+The Streamlit application provides:
 
-- Vinícius leads four of five predefined tactical scenarios.
-- Diomande leads the pressing and defensive-work scenario.
-- Vinícius has stronger attacking-threat and creativity scores.
-- Diomande has stronger progression and defensive-contribution scores.
-- The broad weight-distribution experiment favours Diomande more frequently.
+- Player profile comparisons.
+- Key performance indicators.
+- Attacking performance visualisations.
+- Match-level analysis.
+- Tactical selection insights.
+- Scenario and robustness analysis.
 
-These results are exploratory and do not establish a permanent selection hierarchy.
+## Project Structure
 
-## Sample Definition
-
-| Measure | Vinícius | Diomande |
-|---|---:|---:|
-| Verified LW starts | 7 | 5 |
-| LW minutes | 565 | 434 |
-| LW goals | 1 | 3 |
-| LW assists | 3 | 1 |
-| LW goal contributions | 4 | 4 |
-
-## Technology Stack
-
-- Python
-- Pandas
-- NumPy
-- Plotly
-- Streamlit
-- FotMob-derived data
-
-## Running the Dashboard
+```text
 real-madrid-left-wing-tactical-selection/
 │
 ├── app57.py
 ├── requirements.txt
+├── README.md
 │
 └── data/
-    ├── player_profile.csv
+    ├── left_wing_matches.csv
     ├── player_metrics.csv
-    └── left_wing_matches.csv
+    └── player_profile.csv
 ```
 
-## Limitations
+## Technologies
 
-The study uses a small number of verified left-wing starts. Some tactical metrics are season-wide rather than position-specific. The weight distributions represent modelling assumptions, not actual coaching preferences or probabilities of match success.
+- Python
+- Pandas
+- NumPy
+- Streamlit
+- Plotly
+- Data visualisation and statistical analysis
 
-## Research Status
+## Running the Application Locally
 
-Exploratory tactical selection model developed. Further validation using position-specific metrics, opponent tactical profiles and team-level impact analysis is required.
+Clone the repository:
+
+```bash
+git clone https://github.com/stephen1-hub/real-madrid-left-wing-tactical-selection.git
+```
+
+Move into the project directory:
+
+```bash
+cd real-madrid-left-wing-tactical-selection
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app57.py
+```
+
+## Deployment
+
+The application is designed for deployment using Streamlit Community Cloud.
+
+Repository: [GitHub Project](https://github.com/stephen1-hub/real-madrid-left-wing-tactical-selection)
+
+## Important Note
+
+This is an analytical decision-support project. Statistical
